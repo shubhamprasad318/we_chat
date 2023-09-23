@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chat App</title>
+</head>
+<body>
+    <div class="chat-container">
+        <h2>we chat</h2>
+        <div class="user-interface">
+            <input type="text" id="username-input" placeholder="Enter your username...">
+            <input type="text" id="message-input" placeholder="Type your message...">
+            <button id="send-button">Send</button>
+
+            <!-- Add a dark mode toggle button -->
+            <label class="switch">
+                <input type="checkbox" id="dark-mode-toggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <div class="chat-output" id="chat-output">
+            <!-- Chat messages go here -->
+            <div class="message">
+                <img src="download.jpeg" alt="User Avatar" class="avatar">
+                <div class="message-content">
+                    <p>This is a chat message with an avatar.</p>
+                    <span class="timestamp">12:30 PM</span>
+                </div>
+                <div class="reactions">
+                    <button class="reaction-button">😃</button>
+                    <button class="reaction-button">❤️</button>
+                </div>
+            </div>
+
+            <!-- Sent message -->
+            <div class="message sent">
+                <div class="message-content">
+                    <p>This is a sent message.</p>
+                    <span class="timestamp">12:30 PM</span>
+                </div>
+                <div class="status">
+                    <span>Sent</span>
+                </div>
+            </div>
+
+            <!-- Delivered message -->
+            <div class="message delivered">
+                <div class="message-content">
+                    <p>This is a delivered message.</p>
+                    <span class="timestamp">12:32 PM</span>
+                </div>
+                <div class="status">
+                    <span>Delivered</span>
+                </div>
+            </div>
+
+            <!-- Read message -->
+            <div class="message read">
+                <div class="message-content">
+                    <p>This is a read message.</p>
+                    <span class="timestamp">12:35 PM</span>
+                </div>
+                <div class="status">
+                    <span>Read</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="user-list" id="user-list">
+            <!-- User list goes here -->
+            <div class="user online">User 1</div>
+            <div class="user offline">User 2</div>
+        </div>
+    </div>
+
+    <script src="client.js"></script>
+</body>
+</html>

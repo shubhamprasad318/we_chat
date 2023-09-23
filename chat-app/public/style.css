@@ -1,0 +1,239 @@
+/* Reset default styles and set common styles */
+body, html {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transitions */
+}
+
+/* Common styles for chat container */
+.chat-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Input and button styles */
+input[type="text"], button {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+#message-input {
+  width: 70%;
+}
+
+#send-button {
+  padding: 5px 10px;
+  background-color: #0f8904;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+#send-button:hover {
+  background-color: #0c6a03; /* Darker green on hover */
+}
+
+/* Dark mode toggle styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: transform 0.3s ease; /* Smooth transform transition */
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #0b0601;
+  color: #f2edc0;
+}
+
+/* Message display and user list styles */
+.chat-output, .user-list {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Chat message style */
+.message {
+  animation: slide-in 0.5s ease forwards;
+  background-color: #adbd5f;
+  color: #151313;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Typing indicator animation */
+.typing-indicator::before {
+  content: ' ';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 4px;
+  background-color: #007bff;
+  border-radius: 50%;
+  animation: typing 1s infinite;
+}
+
+@keyframes typing {
+  0%, 100% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+}
+
+/* Emoji animation */
+.emoji {
+  animation: bounce 0.5s ease infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-5px);
+  }
+}
+
+/* User status animation */
+.user-status {
+  transition: color 0.3s ease;
+}
+
+.user.online {
+  color: #00cc00; /* Green for online */
+}
+
+.user.offline {
+  color: #cc0000; /* Red for offline */
+}
+
+/* CSS for message animations */
+@keyframes slide-in {
+  from {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+/* Style for user avatars */
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Style for message timestamp */
+.timestamp {
+  font-size: 0.8rem;
+  color: #777;
+}
+/* Style for message status */
+.status {
+  font-size: 0.8rem;
+  color: #777;
+  margin-left: 10px;
+}
+.sent .status {
+  color: #007bff; /* Sent messages are blue */
+}
+.delivered .status {
+  color: #0f8904; /* Delivered messages are green */
+}
+.read .status {
+  color: #ff8c00; /* Read messages are orange */
+}
+
+/* Style for message reactions */
+.reactions {
+  margin-top: 5px;
+}
+
+.reaction-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.reaction-button:hover {
+  transform: scale(1.2);
+}
+/* Style for user status indicators */
+.user {
+  margin-bottom: 5px;
+}
+
+.online::before {
+  content: "●";
+  color: #00cc00; /* Green for online */
+  margin-right: 5px;
+}
+
+.offline::before {
+  content: "●";
+  color: #cc0000; /* Red for offline */
+  margin-right: 5px;
+}

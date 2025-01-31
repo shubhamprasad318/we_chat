@@ -47,21 +47,12 @@ Navigate to the project folder:
 ## **File Structure**
 
 `chat-app/`
-
 `│`
-
 `├── public/`
-
 `│   ├── index.html     # The HTML structure for the chat interface`
-
 `│   ├── style.css      # Styling for the chat app, including dark mode`
-
 `│   └── client.js      # Client-side JavaScript to manage WebSocket interactions`
-
-`│`
-
 `├── server.js          # The backend server handling WebSocket and Express routes`
-
 `└── package.json       # Project metadata and dependencies`
 
 ## **Technologies Used**
